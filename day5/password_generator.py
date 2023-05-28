@@ -20,7 +20,7 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #   password += random.choice(numbers)
 # print(password)
 #Hard Level - Order of characters randomised:
-password_list = []
+password_list = [] # since strings are immutable, we cannot have password_list = ""
 for char in range(1,nr_letters+1):
   password_list += random.choice(letters)
 for sym in range(1,nr_symbols+1):
