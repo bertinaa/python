@@ -1,4 +1,60 @@
 import random
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
 word_list = ["aardvark", "baboon", "camel"]
 chosen_word = random.choice(word_list)
 
@@ -14,8 +70,14 @@ while not end_of_game :
   for i in range(len(chosen_word)):
       if chosen_word[i] == guess:
           display[i]=guess
-      #Join all the elements in the list and turn it into a String.
+  #line 74's if statement is not an elif of line 71 because then it will iterate  thro the entire word and then do lives--      
+  if guess not in chosen_word:
+    lives -= 1
+    if lives==0:
+      print("You Lose.")
+      print(f"The word was {chosen_word}")
+  #Join all the elements in the list and turn it into a String.
   print(f"{' '.join(display)}")
-  print(display)
   if '_' not in display:
     end_of_game = True
+  print(stages[lives])
