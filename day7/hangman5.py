@@ -88,5 +88,7 @@ while not end_of_game :
   #Join all the elements in the list and turn it into a String.
   print(f"{' '.join(display)}")
   if '_' not in display:
+    print("You win.")
     end_of_game = True
+    
   print(stages[lives])
