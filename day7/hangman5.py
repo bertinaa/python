@@ -72,7 +72,7 @@ for char in chosen_word:
 
 while not end_of_game :
   guess = input("Guess a letter: ").lower()
-  #to display a message when user guesses the same word again
+  #to display a message when user guesses the same letter again
   if guess in display:
       print(f"You've already guessed {guess}, please try a different letter :3")
   for i in range(len(chosen_word)):
