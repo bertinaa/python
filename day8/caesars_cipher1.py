@@ -13,8 +13,7 @@ def encrypt(text,shift):
   for letter in text:
     position = alphabet.index(letter)
     new_position = position + shift
-    letter = alphabet[new_position]
-    cipher_text += letter
+    cipher_text += alphabet[new_position]
   print(cipher_text)
     
     #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
