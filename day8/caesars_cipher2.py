@@ -22,7 +22,16 @@ def decrypt(cipher_text, shift_amount):
     new_position = position - shift_amount
     plain_text += alphabet[new_position]
   print(f"The decoded text is {plain_text}")
+"""
+in case of cipher_text abc and a shift number of 3, it will give plain_text abc 
+because python allows negative indexing
+Let's consider the letter 'a' and a shift_amount of 3:
 
+The index of 'a' in the alphabet list is 0.
+Subtracting 3 from 0 gives -3.
+Since Python allows negative indexing, -3 in the alphabet list corresponds to the letter 'x'.
+Therefore, 'a' is decrypted to 'x' when using a shift_amount of 3.
+"""
 if direction == "encode":
   encrypt(plain_text=text, shift_amount=shift)
 elif direction == "decode":
