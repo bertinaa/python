@@ -5,15 +5,21 @@ text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
 #TODO-1: Combine the encrypt() and decrypt() functions into a single function called caesar(). 
-def caesar(input_text,shift_number,shift_direction):
+
+def caesar(start_text, shift_amount, cipher_direction):
   end_text = ""
-  for letter in input_text:
+  if cipher_direction == "decode":
+      shift_amount *= -1
+  #if statement should be outside the for loop
+  # if we don't do that the output text will be a 
+  # random combination of encode decode
+  # as it keeps multiplying with -1
+  for letter in start_text:
     position = alphabet.index(letter)
-    if direction=='encode':
-      new_position = position + shift_number
-    else:
-      new_position = position - shift_number
+    new_position = position + shift_amount
     end_text += alphabet[new_position]
-  print(end_text)
+  print(f"Here's the {direction}d result: {end_text}")
+
+
 #TODO-2: Call the caesar() function, passing over the 'text', 'shift' and 'direction' values.
-caesar(input_text=text, shift_number=shift, shift_direction=direction)
+caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
