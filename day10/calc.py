@@ -40,8 +40,9 @@ def calculator():
     elif user_input=='n':
       should_continue = False
       clear()
-      calculator() #recursive function
+      calculator()
     else:
       print( "Goodbye!")
+      break
 
 calculator()
