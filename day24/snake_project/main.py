@@ -5,7 +5,6 @@ import time
 from snake import Snake
 from scoreboard import Scoreboard
 
-
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
@@ -28,13 +27,11 @@ while game_on:
     screen.update()
     time.sleep(0.1)
 
-    #detecting wall collision
+    # detecting wall collision
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        #note less than! failure as an engg graduate tch tch tch
+        # note less than! failure as an engg graduate tch tch tch
         score_board.reset()
         snake.reset()
-
-
 
     # detecting collision with food
     if snake.head.distance(food) < 15:
@@ -42,13 +39,11 @@ while game_on:
         snake.extend()
         score_board.increase_score()
 
-    #detecting if snake is biting off its own body
+    # detecting if snake is biting off its own body
     for segment in snake.segments[1:]:
-        #slicing cause we don't want it to check the first segment which is the head cause of the if condition below!
-        if snake.head.distance(segment) <10:
+        # slicing cause we don't want it to check the first segment which is the head cause of the if condition below!
+        if snake.head.distance(segment) < 10:
             score_board.reset()
             snake.reset()
-
-
 
 screen.exitonclick()
