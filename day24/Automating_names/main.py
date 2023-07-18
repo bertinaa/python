@@ -16,8 +16,8 @@ with open("Input/Letters/starting_letter.txt", "r") as starting_letter:
 for name in invited_names:
     stripped_name = name.strip() #to remove \n
     #note : this doesn't work if you do name.strip()
+    final_text = letter_content.replace(PLACEHOLDER,stripped_name)
     with open(f"Output/ReadyToSend/{stripped_name}.txt","w") as new_letter:
-        final_text = letter_content.replace(PLACEHOLDER,stripped_name)
         new_letter.write(final_text)
 
 
