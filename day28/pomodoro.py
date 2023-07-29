@@ -69,6 +69,7 @@ def countdown(count):
         # after 1000ms = 1s, call the count down function and then decrease count by 1
     else:
         winsound.Beep(1000, 1000)
+        #The winsound.Beep(1000, 1000) function in Python using the winsound module produces a simple beep sound using the computer's speaker.
         start_timer()
 
     mark = ""
