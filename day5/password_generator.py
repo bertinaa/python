@@ -12,6 +12,10 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #Eazy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 # password = ""
+"""
+in this a new string is created and then the new string is being assigned to the variable password, the same string/object is not being modified.
+Therefore we can confer that strings are immutable but you can do concatenation operation on them
+"""
 # for char in range(1,nr_letters+1):
 #   password += random.choice(letters)
 # for sym in range(1,nr_symbols+1):
@@ -19,8 +23,11 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 # for sym in range(1,nr_numbers+1):
 #   password += random.choice(numbers)
 # print(password)
+
+
 #Hard Level - Order of characters randomised:
-password_list = [] # since strings are immutable, we cannot have password_list = ""
+password_list = [] 
+# since strings are immutable, we cannot have password_list = ""
 for char in range(1,nr_letters+1):
   password_list += random.choice(letters)
 for sym in range(1,nr_symbols+1):
