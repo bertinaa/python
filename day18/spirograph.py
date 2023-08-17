@@ -22,6 +22,7 @@ def draw_spirograph(size_of_gap):
   The value of 360 is divided by size_of_gap to determine the number of iterations needed to complete a full revolution.
 For example, if size_of_gap is set to 10, then 360/10 equals 36, which means the loop will iterate 36 times to complete a full revolution.
   """
+    timmy.hideturtle()
     for _ in range(int(360/size_of_gap)): 
         timmy.color(change_color())
         timmy.circle(50)
