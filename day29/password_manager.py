@@ -1,5 +1,5 @@
 from tkinter import *  # will import all the classes
-from tkinter import messagebox  # this is just a piece of code
+from tkinter import messagebox  # this is just a piece of code (file) so we need to import it again
 import random
 import pyperclip
 
@@ -64,11 +64,11 @@ canvas.grid(row=0, column=1)
 website = Label()
 website.config(text="Website: ", font=FONT)
 website.grid(row=1, column=0)
-website.focus()  # this will make the mouse select/have focus in the website entry part
+
 
 site_name = Entry(width=35, borderwidth=0)
 site_name.grid(row=1, column=1, columnspan=2, sticky="EW")
-
+site_name.focus()  # this will make the mouse select/have focus in the website entry part
 # second row
 email = Label()
 email.config(text="Email/Username: ", font=FONT)
